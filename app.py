@@ -361,7 +361,7 @@ def main():
                 if isinstance(latest_result['result'], str):
                     # Clean the result string
                     clean_result = latest_result['result'].strip()
-                    if clean_result.startswith('```
+                    if clean_result.startswith('```'):
                         clean_result = clean_result[7:]
                     if clean_result.endswith('```'):
                         clean_result = clean_result[:-3]
