@@ -428,7 +428,7 @@ def main():
                         clean_result = clean_result[7:]
                     if clean_result.startswith('```'):
                         clean_result = clean_result[3:]
-                    if clean_result.endswith('```
+                    if clean_result.endswith('```"):
                         clean_result = clean_result[:-3]
                     
                     result_data = json.loads(clean_result)
