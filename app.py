@@ -1,3 +1,17 @@
+import sys
+import subprocess
+import importlib.util
+
+# Install pysqlite3-binary if not already installed
+try:
+    import pysqlite3
+except ImportError:
+    subprocess.check_call([sys.executable, "-m", "pip", "install", "pysqlite3-binary"])
+    import pysqlite3
+
+# Replace sqlite3 with pysqlite3
+sys.modules["sqlite3"] = sys.modules.pop("pysqlite3")
+
 import streamlit as st
 import json
 from crewai import Task, Crew, Agent, Process
