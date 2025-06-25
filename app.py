@@ -352,11 +352,11 @@ def parse_result(result_str):
     try:
         # Clean the result string
         clean_result = result_str.strip()
-        if clean_result.startswith('```
+        if clean_result.startswith('```'):
             clean_result = clean_result[7:]
         if clean_result.startswith('```'):
             clean_result = clean_result[3:]
-        if clean_result.endswith('```
+        if clean_result.endswith('```'):
             clean_result = clean_result[:-3]
         
         result_data = json.loads(clean_result)
