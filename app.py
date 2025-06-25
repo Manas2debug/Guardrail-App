@@ -483,6 +483,13 @@ def main():
             if flags:
                 flag_cols = st.columns(2)
                 col_idx = 0
+
+                if not isinstance(flags, dict):
+                    st.error("flags is not a dictionary!")
+                    st.write("flags:", flags)
+                    return
+
+                
                 
                 for agent, flag in flags.items():
                     with flag_cols[col_idx % 2]:
