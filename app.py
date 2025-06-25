@@ -314,7 +314,7 @@ def process_user_input(user_prompt, user_id="default_user"):
     
     master_task = Task(
         description=f"""Synthesize the analyses from all specialized agents: Guardian, Economist,
-    Curator, Malicious Prompt Detector, and Language Detector. The original user prompt was '{USER_PROMPT}'.
+    Curator, Malicious Prompt Detector, and Language Detector. The original user prompt was '{user_prompt}'.
     Your final output *must* be a JSON object that includes a 'suggested_bot_response'.
     This response should be crafted strictly in the persona of Jayden Lim (a chill young Singaporean guy, using Singlish and Gen Z slang, with short, 1-2 sentence responses).
 
