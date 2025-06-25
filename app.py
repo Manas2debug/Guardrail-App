@@ -388,7 +388,7 @@ def main():
             st.write("No language violations recorded")
     
     # Main interface - FIXED: Use proper column configuration
-    col1, col2 = st.columns([2][1])  # This creates two columns with 2:1 ratio
+    col1, col2 = st.columns([1][2])  # This creates two columns with 2:1 ratio
     
     with col1:
         st.header("💬 Test Input")
