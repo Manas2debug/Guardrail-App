@@ -480,14 +480,9 @@ def main():
             # Display flags analysis
             st.markdown("### 🚩 **Moderation Flags:**")
             
-            if flags:
+            if isinstance(flags, dict) and flags:
                 flag_cols = st.columns(2)
                 col_idx = 0
-
-                if not isinstance(flags, dict):
-                    st.error("flags is not a dictionary!")
-                    st.write("flags:", flags)
-                    return
 
                 
                 
