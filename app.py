@@ -36,7 +36,7 @@ if 'user_language_violation_counts' not in st.session_state:
 if "GEMINI_API_KEY" in st.secrets:
     os.environ["GEMINI_API_KEY"] = st.secrets["GEMINI_API_KEY"]
 elif "GEMINI_API_KEY" not in os.environ:
-    os.environ["GEMINI_API_KEY"] = "AIzaSyDOXXgm273OASc3sy2y9kIFi5DgUoi67lQ"
+    os.environ["GEMINI_API_KEY"] = "AIzaSyAIjIklndVQxVJkb7_IpPkW8t72k4jEmgU"
 
 llm = 'gemini/gemini-2.0-flash'
 
